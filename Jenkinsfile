@@ -16,5 +16,10 @@ pipeline {
                     sh './jenkins/scripts/kill.sh'
                 }
             }
+            stage('Test') {
+                steps {
+                    sh 'echo hacer test'
+                }
+            }
         }
 }
