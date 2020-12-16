@@ -10,5 +10,5 @@ test('renders learn react link', () => {
 
 test('calculo de Area', () => {
   const calcularArea = area(10,10);
-  expect(calcularArea).toEqual(90)
+  expect(calcularArea).toEqual(100)
 });
