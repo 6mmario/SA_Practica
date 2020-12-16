@@ -9,7 +9,7 @@ function App() {
         <p>
           Software Avanzado
           Vacaciones Diciembre
-
+          Practica 1
         </p>
         <p>
           Mario Morales <strong>201213283</strong>
