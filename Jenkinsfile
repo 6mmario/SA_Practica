@@ -4,6 +4,11 @@ pipeline {
         CI = 'true'
     }
     stages {
+            stage('Cloning Git'){
+                steps{
+                    git 'https://gitlab.com/6mmario/sa_practicas.git'
+                }
+            }
             stage('Build') {
                 steps {
                     sh 'npm install'
