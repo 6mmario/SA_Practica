@@ -26,5 +26,10 @@ pipeline {
                     sh 'echo hacer test'
                 }
             }
+            stage('Deploy'){
+                steps{
+                    sh 'npm start'
+                }
+            }
         }
 }
