@@ -9,16 +9,12 @@ pipeline {
                     git 'https://gitlab.com/6mmario/sa_practicas.git'
                 }
             }
-            stage('Build') {
+            stage('Instalar_Dependencias') {
                 steps {
                     sh 'npm install'
                 }
             }
-            stage('Test') {
-                steps {
-                    sh 'npm test'
-                }
-            }
+            
             stage('Deploy'){
                 steps{
                     sh 'npm start'
