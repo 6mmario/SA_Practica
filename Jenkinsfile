@@ -6,7 +6,7 @@ pipeline {
     stages {
             stage('Cloning Git'){
                 steps{
-                    git 'https://gitlab.com/6mmario/sa_practicas.git'
+                    git 'https://github.com/6mmario/SA_Practica.git'
                 }
             }
             stage('Instalar_Dependencias') {
