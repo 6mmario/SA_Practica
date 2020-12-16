@@ -9,9 +9,6 @@ pipeline {
                     sh 'npm install'
                 }
             }
-            stage('test') {
-                    sh './node_modules/.bin/nightwatch -e chrome,edge tests'
-            }  
             stage('Deliver') {
                 steps {
                     sh './jenkins/scripts/deliver.sh'
