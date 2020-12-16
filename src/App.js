@@ -10,7 +10,7 @@ function App() {
           Practica 1 SA
         </p>
         <p>
-          Mario Morales
+          Mario Morales <strong>201213283</strong>
         </p>
         <a
           className="App-link"
