@@ -8,7 +8,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Software Avanzado
-          Practica 1 SA
+          Vacaciones Diciembre
+
         </p>
         <p>
           Mario Morales <strong>201213283</strong>
