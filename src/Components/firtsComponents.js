@@ -1,3 +1,6 @@
-// Primer Componente
+// CheckboxWithLabel.js
+function area(a, b){
+  return a * b;
+}
 
-// segundo comentario
+export { area }
