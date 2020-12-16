@@ -1,6 +1,7 @@
 // CheckboxWithLabel.js
 function area(a, b){
-  return a + b;
+  let sum = a + b
+  return sum;
 }
 
 export { area }
