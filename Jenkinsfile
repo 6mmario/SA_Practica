@@ -4,25 +4,23 @@ pipeline {
         CI = 'true'
     }
     stages {
-            stage('Cloning Git'){
-                steps{
-                    git 'https://github.com/6mmario/SA_Practica.git'
-                }
-            }
-            stage('Instalar_Dependencias') {
+            stage('Build') {
                 steps {
                     sh 'npm install'
                 }
             }
-            stage('TEST'){
-                steps{
-                    sh 'npm test'
+            stage('test') {
+                    sh './node_modules/.bin/nightwatch -e chrome,edge tests'
+            }  
+            stage('Deliver') {
+                steps {
+                    sh './jenkins/scripts/deliver.sh'
+                    input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                    sh './jenkins/scripts/kill.sh'
                 }
             }
-            stage('Deploy'){
-                steps{
-                    sh 'npm start'
-                }
+            stage('end') {  
+                    echo "Success" 
             }
         }
 }
