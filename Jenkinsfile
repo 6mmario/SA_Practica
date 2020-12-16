@@ -23,9 +23,9 @@ pipeline {
                 catch (err){
                     echo err
                     }  
-                }
+            }
             stage('end') {  
                     echo "Success" 
-                }
+            }
         }
 }
