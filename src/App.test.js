@@ -8,7 +8,7 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('calculo de Area', () => {
+test('calculo de Area es', () => {
   const calcularArea = area(10,10);
   expect(calcularArea).toEqual(100)
 });
