@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Aplicar Test') {
             steps {
-               sh 'npm n2n'
+               sh 'npm e2e'
             }
         }
         stage('Deploy') {
