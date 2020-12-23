@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Aplicar Test') {
             steps {
-               sh 'npm e2e'
+               sh ('./node_modules/karma/bin/karma start karma.conf.js') 
             }
         }
         stage('Deploy') {
