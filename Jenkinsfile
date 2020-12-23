@@ -11,23 +11,17 @@ pipeline {
         }
         stage('Instalar Dependencias') {
             steps {
-                sh '
-                npm install
-                '
+                sh 'npm install'
             }
         }
         stage('Aplicar Test') {
             steps {
-               sh '
-               npm test
-               '
+               sh 'npm test'
             }
         }
         stage('Deploy') {
             steps {
-                sh '
-                npm start
-                '
+                sh 'npm start'
             }
         }
     }
