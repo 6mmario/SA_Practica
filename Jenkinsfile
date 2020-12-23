@@ -12,6 +12,11 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('Aplicar Test') {
+            steps {
+              sh 'npm test --progress false --watch false'
+            }
+        }
         stage('Build Image'){
             steps {
                 sh '''
@@ -21,11 +26,6 @@ pipeline {
                 cat ~/my_password.txt | docker login --username 6mmario --password-stdin
                 docker push 6mmario/practicasa
                 '''
-            }
-        }
-        stage('Aplicar Test') {
-            steps {
-              sh 'npm test --progress false --watch false'
             }
         }
         stage('Deploy') {
